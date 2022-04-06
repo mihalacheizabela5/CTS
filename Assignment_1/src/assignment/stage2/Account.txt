@@ -1,0 +1,57 @@
+1. Code formatting
+-the proper naming conventions haven't been followed - the lowerCamelCase was used
+-the code has some comments
+-there are some places where curly brackets don't appear 
+-the else was removed because in if appear an Exception
+-white spaces were removed and the proper alignment was implemented
+
+2. Meaningful names:
+-the names of the functions were modified for users to understand better what they do:
+        - loan() was modified to getLoanValue()
+	- setValue() was modified to setLoanValue()
+	- to_string() was modified to getAccountDetails()
+	- calculate() was modified to getPremiumAndSuperPremiumAccountsTotalFeesValue()
+	- getRate() was modified to getMonthlyRate()
+	- monthlyRate() was modified to computeMonthlyRate()
+-the names of the attributes wre modified for users to understand better what they mean
+        - rate was modified to monthlyRate
+	- value was modified to loanValue
+	- type was modified to accountType
+
+3. Programming:
+-the string concateanation was removed and function was implemented using string builder
+
+4. Comments:
+-the comments were removed because they are useless
+
+5. Ennums
+- transformed the values for the account type into an enumeration
+- modified the code for implementing the AccountType enumeration and removed the accountType integer
+
+6.Mutability
+- implemented the .0125 broker fee as a static final variable and removed the unnecessary comment
+- implemented the 365 integer as a static final variable
+
+7.Methods and input validation
+- check if parameters are OK before creating a new account
+- cannot input negative values for loan and monthly rate
+
+8. Functions
+- broke the calculate function into multiple smaller more understandable functions that do specific things:
+	- difference between interest and principal (also removed the comment)
+	- account interest fee
+	- loan value with interest
+	- account final fee
+- removed useless function print() that has no actual significance and relevance
+
+9. Exceptions:
+- custom exceptions were created and implemented accordingly
+
+10. Classes:
+- created the enumeration, interface and exception class so that the class is small
+- class functionalities distributed in other classes
+
+11. Creating and destroying objects:
+- removed the unused temp variable
+- removed the unnecessary Account variable in the calculate function and used accounts[i] instead
+
